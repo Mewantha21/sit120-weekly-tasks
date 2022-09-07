@@ -6,11 +6,20 @@ h1{
 body{
   background-color: lightcyan;
   font-family: 'Segoe UI';
+  
 }
 
 #edit{
   font-size: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  div{
+    background: lightseagreen;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
 
 
