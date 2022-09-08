@@ -32,10 +32,23 @@
             <option>Western Autralia</option>
             <option>South Australia</option>
         </select>
+        <component1></component1>
+        <component2></component2>
 
     </div>
 </body>
 <script type="text/javascript">
+    Vue.component('component1',{
+        template: '<div>Welcome to Melbourne</div>',
+    });
+    Vue.component('component2',{
+        template: '<div>{{mas}}</div>',
+        data: function() {
+            return{
+                mas: 'Explore australia',
+            };
+        },
+    });
     var app = new Vue({
         el: '#app',
         data: {
