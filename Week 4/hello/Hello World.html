@@ -2,21 +2,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
-    <title>Hello World</title>
+    <title>Hello World</title> 
      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="app">
         {{ msg }}
+        <p>Name is: {{name}}</p>
+        <input v-model = 'name' type="text" placeholder="Enter username" />
+        <p>Password is: {{pass}}</p>
+        <input v-model = 'pass' type="password" placeholder="Enter password" />
+        <br><br>
+        <span>Checked age group: {{age}}</span><br>
+        <input type="checkbox" value="0-20" v-model = "age">
+        <label for="0-20">'0-20'</label>
+        <input type="checkbox" value="21-40" v-model = "age">
+        <label for="21-40">'21-40'</label>
+        <input type="checkbox" value="41-60" v-model = "age">
+        <label for="41-60">'41-60'</label>
+        <input type="checkbox" value="61-100" v-model = "age">
+        <label for="61-100">'61-100'</label>
+        <br><br>
+        <span>Your state is: {{sel}} </span><br>
+        <select v-model = 'sel'>
+            <option disabled value="">"Select any state" </option>
+            <option>Victoria</option>
+            <option>New South Wales</option>
+            <option>Queensland</option>
+            <option>Western Autralia</option>
+            <option>South Australia</option>
+        </select>
+
     </div>
 </body>
 <script type="text/javascript">
     var app = new Vue({
         el: '#app',
         data: {
-            
-            msg: 'Hello World!'
-            
+            msg: 'Hello World!',
+            name : 'jason',
+            pass : '12345',
+            sel : '',
+            age : []
         }
     });
 </script>
