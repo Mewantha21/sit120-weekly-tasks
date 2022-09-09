@@ -1,0 +1,5 @@
+For assigment 3 I'm going to create a website which will help 
+people as a guide to travel in asutralia. 
+The website will include information about the states,
+cities and the activities that can be done. 
+The website is still under progress.
