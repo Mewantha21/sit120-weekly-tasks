@@ -28,6 +28,7 @@ body{
   content: "";
   display: table;
   clear: both;
+}
 
 @media screen and (min-width: 480px) {
   div{
