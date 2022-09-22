@@ -1,0 +1,35 @@
+/* SIT120 Assessment 3 */
+/* Mewantha */
+/* style for guide html */
+
+/* Main Content Styles */
+.main-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 5%;
+}
+
+.introduction {
+    flex: 60%;
+    color: aqua;
+}
+
+/* Secondary Content Styles */
+.secondary-content {
+    display:flex;
+    justify-content: center;
+
+}
+
+.secondary-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+}
+
+.class{
+    vertical-align: right;
+}

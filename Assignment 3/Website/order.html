@@ -1,0 +1,212 @@
+<!--  SIT120 Assessment 3 -->
+<!--  -->
+<!-- order.html --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="gui.css" />
+  
+    <!-- Used for @media rules in CSS. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Aussie Guide</title>
+  </head>
+
+  <body>
+    
+    <div class="main-navigation">
+      <!--Two unordered lists are used for the navigation bar. -->
+      <ul class="nav-list-1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="order.html">Order Now!!</a></li>
+      </ul>
+
+      <ul class="nav-list-2">
+        <!-- The mail icon will take to mail. -->
+        <li><a href="mailto: s222097589@deakin.edu.au"><img src="resources/icons/gmail.png" class="icon" alt="Email" style="max-width: 60px; max-height: 60px;"></a></li>
+      </ul>
+    </div>
+
+     <!-- Container for all main content. -->
+     <div class="main-content">
+       
+        <div class="introduction">
+            <h1>Ordering page</h1>
+            <p>Here is where you can order a guide book.</p>
+        </div>
+    </div>
+
+    <!-- content(Secondary). -->
+    <div class="secondary-content">
+     
+      <div class="secondary-wrapper">
+        <div class="secondary-intro">
+          <h1>Fill the from below to submit your order</h1>
+        </div>
+        
+        
+        <div class="order-form">
+          
+          <form class="form">
+            <div class="section1">
+              <h3>Personal Information</h3>
+              <div class="section1-content">
+                <div class="row1">
+                  <!-- Containers are used for each label/input pair for easy styling in CSS> -->
+                  <div class="input-wrapper">
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname" v-model="fname">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="lname2">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname" v-model="lname"><br>
+                  </div>
+                </div>
+
+                <div class="row2">
+                  <div class="input-wrapper">
+                    <label for="addr">Address:</label><br>
+                    <input type="text" id="addr" name="addr" v-model="addr"><br>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="state">State:</label><br>
+                    <select name="state" id="state" from="state" v-model="state">
+                      <option value="VIC">VIC</option>
+                      <option value="NSW">NSW</option>
+                      <option value="SA">SA</option>
+                      <option value="QLD">QLD</option>
+                      <option value="NT">NT</option>
+                      <option value="TAS">TAS</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row3">
+                  <div class="input-wrapper">
+                    <label for="postcode">Post Code:</label><br>
+                    <input type="text" id="postcode" name="postcode" maxlength="4" v-model="postcode">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" v-model="email">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section2">
+              <h3>Keyboard Information</h3>
+
+                <div class="section2-content">
+                  <div class="row1">
+                    <div class="input-wrapper">
+                      <label for="case">Book size:</label><br>
+                      <select type="text" id="size" name="size">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                      </select>
+                    </div>
+
+                  
+                  <div class="row2">
+                    <div class="input-wrapper">
+                      <label for="soon">How soon do you need it?(select):</label><br>
+                      <select type="text" id="date" name="date">
+                        <option value="asap">ASAP</option>
+                        <option value="Within a week">Within a week</option>
+                        <option value="Within two weeks">Within two weeks</option>
+                      </select>
+                    </div>
+    
+                  
+
+                  <div class="row3">
+                    <div class="input-wrapper">
+                      <label for="keycaps">Need a map of Australia?:</label><br>
+                      <input type="text" id="map" name="map" placeholder="Type 'yes' or 'no' " >
+                    </div>
+
+                    <div class="radio">
+                      <div class="title">Cover:</div>
+                        <div class="radio-wrapper">
+
+                          <div class="radio-row1">
+                            <div class="radio-input-wrapper">
+                              <label for="hard">Hardback</label>
+                              <input type="radio" id="hard" name="preferences" value="hard">
+                            </div>
+
+                            <div class="radio-input-wrapper">
+                              <label for="paper">Paperback</label>
+                              <input type="radio" id="paper" name="preferences" value="paper">
+                            </div>
+                          </div>
+    
+                          <div class="radio-row2">
+                            <div class="radio-input-wrapper">
+                              <label for="perf">Perfect Paperback</label>
+                              <input type="radio" id="perf" name="preferences" value="Perfect Paperback">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="section3">
+              <h3>Submit Your Order</h3>
+              <p>Confirm your details below.</p>
+            
+              <div class="section3-content">
+                <div class="col1">
+                  <!-- Handling User Input using v-model. -->
+                  <p>Name: {{ fname }} {{ lname }}</p>
+                  <p>Address: {{ addr }} {{ state }} {{ postcode }} </p>
+                  <p>Email: {{ email }}</p>
+                </div>
+
+                <div class="col2">
+                  <div class="textarea-input-wrapper">
+                    <label for="additional">Comments:</label><br>
+                    <textarea id="com" name="com" rows="6" cols="50"></textarea>
+                  </div>
+                  <div class="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- webpages footer. -->
+    <div class="main-footer">
+        <footer>
+          <!--  links to the respective social media websites. -->
+          <div class="social-media">
+            <a href="https://twitter.com"><img src="resources/icons/twitter-icon.png" class="icon" alt="Twitter" style="max-width: 60px; max-height: 60px;"></a>
+          <a href="https://instagram.com"><img src="resources/icons/instagram-icon.png" class="icon" alt="Instagram" style="max-width: 60px; max-height: 60px;"></a>
+          <a href="https://facebook.com"><img src="resources/icons/facebook-icon.png" class="icon" alt="Facebook" style="max-width: 60px; max-height: 60px;"></a>>
+          </div>
+        </footer>
+      </div>
+  </body>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="order.js"></script>
+    
+</html>
